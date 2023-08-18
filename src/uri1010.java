@@ -1,28 +1,37 @@
+/*
+   04) Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o
+código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago..
+*/
+
 import java.util.Locale;
 import java.util.Scanner;
 
-public class uri1010 {
+public class Ex01JavaNelio {   
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
 
-	public static void main(String[] args) {
+        int CodigoPeca1, NumeroPeca1, CodigoPeca2, NumeroPeca2;
+        double ValorPeca1, ValorPeca2, t2otal; // Correção na nomenclatura da variável
 
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o código da Peça 1:");
+        CodigoPeca1 = sc.nextInt();
+        System.out.println("Digite o número da Peça 1:");
+        NumeroPeca1 = sc.nextInt();
+        System.out.println("Digite o valor unitário da Peça 1:");
+        ValorPeca1 = sc.nextDouble();
 
-		int cod1, cod2, qte1, qte2;
-	    double preco1, preco2, total;
+        System.out.println("Digite o código da Peça 2:");
+        CodigoPeca2 = sc.nextInt();
+        System.out.println("Digite o número da Peça 2:");
+        NumeroPeca2 = sc.nextInt();
+        System.out.println("Digite o valor unitário da Peça 2:");
+        ValorPeca2 = sc.nextDouble();
 
-	    cod1 = sc.nextInt();
-	    qte1 = sc.nextInt();
-	    preco1 = sc.nextDouble();
-	    
-	    cod2 = sc.nextInt();
-	    qte2 = sc.nextInt();
-	    preco2 = sc.nextDouble();
+        total = ValorPeca1 * NumeroPeca1 + ValorPeca2 * NumeroPeca2; 
 
-	    total = preco1 * qte1 + preco2 * qte2;
-
-	    System.out.printf("VALOR A PAGAR: R$ %.2f%n", total);
-		
-		sc.close();
-	}
+        System.out.printf("VALOR A PAGAR: R$ %.2f%n", total);
+        
+        sc.close();
+    }
 }
